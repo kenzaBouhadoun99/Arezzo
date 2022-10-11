@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.Pane?>
+
+<Pane prefHeight="115.0" prefWidth="304.0" xmlns="http://javafx.com/javafx/11" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.ControllerSlider">
+    <children>
+
+        <Slider layoutX="3.0" layoutY="4.0" prefHeight="37.0" prefWidth="192.0" showTickLabels="true" showTickMarks="true" />
+        <Slider layoutX="4.0" layoutY="40.0" majorTickUnit="15.0" max="220.0" min="40.0" prefHeight="32.0" prefWidth="192.0" showTickLabels="true" />
+      <Button layoutX="210.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="60.0" text="volume" />
+      <Button layoutX="211.0" layoutY="37.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="60.0" text="tempo" />
+      <RadioButton layoutX="61.0" layoutY="93.0" mnemonicParsing="false" onAction="#guitare" text="Guitare">
+         <toggleGroup>
+            <ToggleGroup fx:id="paquet" />
+         </toggleGroup></RadioButton>
+      <RadioButton layoutX="136.0" layoutY="94.0" mnemonicParsing="false" onAction="#Saxophone" text="Saxophone" toggleGroup="$paquet" />
+      <RadioButton layoutX="222.0" layoutY="96.0" mnemonicParsing="false" onAction="#trompette" text="Trompette" toggleGroup="$paquet" />
+      <RadioButton layoutX="4.0" layoutY="92.0" mnemonicParsing="false" onAction="#piano" text="Piano" toggleGroup="$paquet" />
+    </children>
+        </Pane>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane prefHeight="160.0" prefWidth="381.0" xmlns="http://javafx.com/javafx/11" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.ControllerMenu">
+    <children>
+
+        <MenuBar opacity="0.74">
+            <menus>
+                <Menu fx:id="menu" mnemonicParsing="false" text="Melodie">
+                    <items>
+                        <MenuItem fx:id="m_nouv" mnemonicParsing="false" text="Nouveau" />
+                        <MenuItem fx:id="m_ouvrir" mnemonicParsing="false" onAction="#ouvrir" text="Ouvrir" />
+                        <MenuItem fx:id="m_save" mnemonicParsing="false" text="Enregistrer sous" />
+                        <MenuItem fx:id="m_quit" mnemonicParsing="false" onAction="#quitter" text="Quitter" />
+                    </items>
+                </Menu>
+                <Menu fx:id="menu2" mnemonicParsing="false" text="Outils">
+                    <items>
+                        <MenuItem fx:id="m_rename" mnemonicParsing="false" onAction="#renommer" text="Renommer" />
+                        <MenuItem fx:id="m_trans" mnemonicParsing="false" text="Transposer" />
+                    </items>
+                </Menu>
+            </menus>
+            <cursor>
+                <Cursor fx:constant="DEFAULT" />
+            </cursor>
+        </MenuBar>
+      <Label fx:id="montitre" alignment="CENTER" contentDisplay="CENTER" layoutX="72.0" layoutY="63.0" prefHeight="27.0" prefWidth="280.0" text="Bohemian Rhapsody (F.Mercury)">
+         <font>
+            <Font size="18.0" />
+         </font></Label>
+    </children>
+</Pane>

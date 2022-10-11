@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+
+<Pane prefHeight="221.0" prefWidth="304.0" xmlns="http://javafx.com/javafx/11" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.ControllerNotes">
+   <children>
+      <Button fx:id="listnote" alignment="BOTTOM_CENTER" contentDisplay="BOTTOM" layoutX="1.0" layoutY="3.0" mnemonicParsing="false" onAction="#ouvrirFenetre" prefHeight="101.0" prefWidth="120.0" text="Notes">
+         <graphic>
+            <ListView fx:id="listview" prefHeight="95.0" prefWidth="120.0" />
+         </graphic></Button>
+      <ImageView fitHeight="79.0" fitWidth="111.0" layoutX="7.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/note.png" />
+         </image>
+      </ImageView>
+
+   </children>
+</Pane>

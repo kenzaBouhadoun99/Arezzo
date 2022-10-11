@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Point3D?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane prefHeight="293.0" prefWidth="476.0" xmlns="http://javafx.com/javafx/11" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.ControllerPiano">
+    <children>
+        <Group layoutX="4.0" layoutY="54.0">
+    <children>
+        <Button fx:id="SI" alignment="CENTER" layoutX="44.0" layoutY="-45.0" mnemonicParsing="false" onAction="#Si" prefHeight="200.0" prefWidth="40.0" style="-fx-background-color: white; -fx-border-color: grey;" textAlignment="CENTER">
+            <padding>
+                <Insets top="5.0" />
+            </padding>
+        </Button>
+        <Button fx:id="DO" alignment="CENTER" layoutX="84.0" layoutY="-45.0" mnemonicParsing="false" onAction="#Do" prefHeight="200.0" prefWidth="40.0" style="-fx-background-color: white; -fx-border-color: grey;" textAlignment="CENTER" />
+        <Button fx:id="RE" alignment="CENTER" layoutX="124.0" layoutY="-45.0" mnemonicParsing="false" onAction="#Re" prefHeight="200.0" prefWidth="40.0" style="-fx-background-color: white; -fx-border-color: grey;" textAlignment="CENTER" />
+        <Button fx:id="MI" alignment="CENTER" layoutX="164.0" layoutY="-45.0" mnemonicParsing="false" onAction="#Mi" prefHeight="200.0" prefWidth="40.0" style="-fx-background-color: white; -fx-border-color: grey;" textAlignment="CENTER" />
+        <Button fx:id="FA" alignment="CENTER" layoutX="204.0" layoutY="-45.0" mnemonicParsing="false" onAction="#Fa" prefHeight="200.0" prefWidth="40.0" style="-fx-background-color: white; -fx-border-color: grey;" textAlignment="CENTER">
+            <padding>
+                <Insets top="5.0" />
+            </padding>
+        </Button>
+        <Button fx:id="SOL" alignment="CENTER" layoutX="244.0" layoutY="-45.0" mnemonicParsing="false" onAction="#Sol" prefHeight="200.0" prefWidth="40.0" style="-fx-background-color: white; -fx-border-color: grey;" textAlignment="CENTER">
+            <padding>
+                <Insets top="5.0" />
+            </padding>
+        </Button>
+        <Button fx:id="SolNoire" layoutX="232.0" layoutY="-44.0" mnemonicParsing="false" onAction="#SolNoire" prefHeight="90.0" prefWidth="24.0" style="-fx-background-color: black;" />
+        <Button fx:id="FaNoire" layoutX="191.0" layoutY="-44.0" mnemonicParsing="false" onAction="#FaNoire" prefHeight="90.0" prefWidth="24.0" style="-fx-background-color: black;" />
+        <Button fx:id="DoNoire" alignment="TOP_CENTER" layoutX="72.0" layoutY="-44.0" mnemonicParsing="false" onAction="#DoNoire" prefHeight="90.0" prefWidth="24.0" style="-fx-background-color: black;" />
+        <Button fx:id="ReNoire" layoutX="151.0" layoutY="-44.0" mnemonicParsing="false" onAction="#ReNoire" prefHeight="90.0" prefWidth="24.0" style="-fx-background-color: black;" />
+        <Button fx:id="LA" layoutX="4.0" layoutY="-45.0" mnemonicParsing="false" onAction="#La" prefHeight="200.0" prefWidth="40.0" style="-fx-background-color: white; -fx-border-color: GREY;" />
+        <Button fx:id="LaNoire" layoutX="32.0" layoutY="-44.0" mnemonicParsing="false" onAction="#LaNoire" prefHeight="90.0" prefWidth="24.0" style="-fx-background-color: black;" />
+    </children>
+</Group>
+        <Button layoutX="36.0" layoutY="213.0" mnemonicParsing="false" opacity="0.71" prefHeight="25.0" prefWidth="249.0" text="chutttttttttt" />
+      <Group layoutX="292.0" layoutY="8.0">
+         <children>
+            <RadioButton fx:id="aig" layoutX="3.0" mnemonicParsing="false" text="aigu" translateX="1.0" translateY="2.0">
+               <rotationAxis>
+                  <Point3D x="2.0" y="2.0" z="2.0" />
+               </rotationAxis>
+               <toggleGroup>
+                  <ToggleGroup fx:id="octa" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="med" layoutX="2.0" layoutY="34.0" mnemonicParsing="false" selected="true" text="medium" toggleGroup="$octa" translateX="1.0" translateY="2.0">
+               <rotationAxis>
+                  <Point3D x="2.0" y="2.0" z="2.0" />
+               </rotationAxis>
+            </RadioButton>
+            <RadioButton fx:id="gra" layoutX="2.0" layoutY="66.0" mnemonicParsing="false" text="grave" toggleGroup="$octa" translateX="1.0" translateY="2.0">
+               <rotationAxis>
+                  <Point3D x="2.0" y="2.0" z="2.0" />
+               </rotationAxis>
+            </RadioButton>
+            <RadioButton fx:id="ron" layoutX="3.0" layoutY="99.0" mnemonicParsing="false" translateX="1.0" translateY="2.0">
+               <rotationAxis>
+                  <Point3D x="2.0" y="2.0" z="2.0" />
+               </rotationAxis>
+               <toggleGroup>
+                  <ToggleGroup fx:id="durre" />
+               </toggleGroup>
+               <graphic>
+            <ImageView fx:id="rond" fitHeight="29.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../images/ronde.png" />
+            </image>
+            </ImageView>
+               </graphic>
+            </RadioButton>
+            <RadioButton fx:id="noi" layoutX="2.0" layoutY="127.0" mnemonicParsing="false" selected="true" toggleGroup="$durre" translateX="1.0" translateY="2.0">
+               <rotationAxis>
+                  <Point3D x="2.0" y="2.0" z="2.0" />
+               </rotationAxis>
+               <graphic>
+            <ImageView fitHeight="29.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../images/noire.png" />
+            </image>
+            </ImageView>
+               </graphic>
+            </RadioButton>
+            <RadioButton fx:id="white" layoutX="2.0" layoutY="158.0" mnemonicParsing="false" toggleGroup="$durre" translateX="1.0" translateY="2.0">
+               <rotationAxis>
+                  <Point3D x="2.0" y="2.0" z="2.0" />
+               </rotationAxis>
+               <graphic>
+            <ImageView fitHeight="18.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../images/blanche.png" />
+            </image>
+            </ImageView>
+               </graphic>
+            </RadioButton>
+            <RadioButton fx:id="croch" layoutX="1.0" layoutY="184.0" mnemonicParsing="false" toggleGroup="$durre" translateX="1.0" translateY="2.0">
+               <rotationAxis>
+                  <Point3D x="2.0" y="2.0" z="2.0" />
+               </rotationAxis>
+               <graphic>
+            <ImageView fitHeight="29.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../images/croche.png" />
+            </image>
+            </ImageView>
+               </graphic>
+            </RadioButton>
+         </children>
+      </Group>
+      <Button fx:id="jouer" layoutX="399.0" layoutY="52.0" mnemonicParsing="false" onAction="#jouerLaPartition" prefHeight="48.0" prefWidth="57.0" style="-fx-background-color: transparent;">
+         <graphic>
+            <ImageView fitHeight="48.0" fitWidth="57.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/play.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <font>
+            <Font name="Arial Black" size="17.0" />
+         </font></Button>
+    </children>
+</Pane>
